@@ -1,0 +1,10 @@
+<h1>Template Driven Form</h1>
+<form #loginform="ngForm" (ngSubmit)="userlogin(loginform.value)">
+<input type="text" ngModel required minlength="4" placeholder="Enter Name" name="name">
+<br><br>
+<input type="password" ngModel placeholder="Enter Password" name="password">
+<br><br>
+<button>Login</button>
+</form>
+<br><br>
+<h1>Reactive Form</h1>

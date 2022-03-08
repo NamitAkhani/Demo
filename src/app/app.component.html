@@ -24,3 +24,19 @@
 </ul>
 <app-transfar (updatedataEvent)="updatedata($event)"></app-transfar>
 {{data}}
+<br/><br/>
+<h1>Two Way Binding</h1>
+<input type="text" [(ngModel)]="twoway">
+<h3>{{twoway}}</h3>
+<br/><br/>
+<h1>Template</h1>
+<input type="text" #template>
+<button (click)="gatvalue(template.value)" >Template</button>
+<br/><br/>
+<h1>Pipes</h1>
+{{date|date : 'fullDate'}}<br>
+<h3>{{slice|slice:3|titlecase}}</h3>
+<h2>{{2000.3000|number:'3.3'}}</h2>
+<h2>{{2000|usdInr}}</h2>
+<app-template></app-template>
+<app-reactiveform></app-reactiveform>

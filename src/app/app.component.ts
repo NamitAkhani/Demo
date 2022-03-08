@@ -17,6 +17,9 @@ export class AppComponent {
     {name:'adi',phone:456123}
   ]
   data="";
+  twoway:any
+  date=Date();
+  slice="we create slice pipe demo";
   getdata(data:NgForm)
   {
     console.warn(data)
@@ -30,5 +33,9 @@ export class AppComponent {
   {
     console.warn(item)
     this.data = item;
+  }
+  gatvalue(item:any)
+  {
+    console.warn(item)
   }
 }

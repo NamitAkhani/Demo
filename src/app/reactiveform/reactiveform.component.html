@@ -1,0 +1,11 @@
+<form [formGroup]="loginform" (ngSubmit)="userlogin()">
+    <input type="text" ngModel  placeholder="Enter Name" name="name" formControlName="name">
+    <br>
+    <span style="color: red;" *ngIf="name && name.invalid && name.touched">UserName is Required</span>
+    <br>
+    <input type="password" ngModel placeholder="Enter Password" name="password" formControlName="password">
+    <br>
+    <span style="color: red;" *ngIf="password && password.invalid && password.touched">Password is Required</span>
+    <br>
+    <button [disabled]="loginform.invalid">Login</button>
+    </form>
